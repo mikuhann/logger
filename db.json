@@ -1,0 +1,47 @@
+{
+  "logs": [
+    {
+      "id": 1,
+      "message": "Change hard drive on ws 005",
+      "attention": false,
+      "date": "03-02-2019",
+      "tech": "Sam Smith"
+    },
+    {
+      "id": 2,
+      "message": "Ws 008 does not starting",
+      "attention": true,
+      "date": "03-02-2019",
+      "tech": "Sara Smith"
+    },
+    {
+      "id": 3,
+      "message": "Change memory on ws 003",
+      "attention": false,
+      "date": "03-02-2019",
+      "tech": "Petr Wilson"
+    }
+  ],
+  "techs": [
+    {
+      "id": 1,
+      "firstName": "Sam",
+      "lastName": "Smith"
+    },
+    {
+      "id": 2,
+      "firstName": "Sara",
+      "lastName": "Smith"
+    },
+    {
+      "id": 3,
+      "firstName": "Petr",
+      "lastName": "Wilson"
+    },
+    {
+      "firstName": "John",
+      "lastName": "Doe",
+      "id": 4
+    }
+  ]
+}
