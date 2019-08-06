@@ -1,3 +1,7 @@
 .logger-navbar {
     margin-bottom: 30px;
 }
+.logger-add-log-modal {
+    width: 75%;
+    height: 75%;
+}
