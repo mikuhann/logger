@@ -9,15 +9,18 @@ const AddLogModal = () => {
   const onSubmit = () => {
     if (message === '' || tech === '') {
       M.toast({
-        html: 'Please enter a log message and technician'
+        html: 'Please, enter a log message and technician'
       });
     } else {
-      console.log(message, tech, attention)
+      console.log(message, tech, attention);
+      setMessage('');
+      setTech('');
+      setAttention(false);
     }
   };
 
   return (
-    <div id="add-log-modal" className="modal logger-add-log-modal">
+    <div id="add-log-modal" className="modal logger-modal">
       <div className="modal-content">
         <h4>Enter system log</h4>
         <div className="row">
