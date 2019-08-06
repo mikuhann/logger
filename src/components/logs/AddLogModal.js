@@ -20,7 +20,7 @@ const AddLogModal = () => {
   };
 
   return (
-    <div id="add-log-modal" className="modal logger-modal">
+    <div id="add-log-modal" className="modal">
       <div className="modal-content">
         <h4>Enter system log</h4>
         <div className="row">
