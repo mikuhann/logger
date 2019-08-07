@@ -1,11 +1,11 @@
 {
   "logs": [
     {
+      "id": 1,
       "message": "Add memory on workstation 003",
       "attention": true,
       "tech": "Someone 1",
-      "date": "2019-08-07T15:38:46.282Z",
-      "id": 1
+      "date": "2019-08-07T18:14:58.752Z"
     },
     {
       "message": "Fix loading issue in workstation 006",

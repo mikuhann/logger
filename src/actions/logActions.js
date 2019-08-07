@@ -3,7 +3,10 @@ import {
   SET_LOADING,
   LOGS_ERROR,
   ADD_LOG,
-  DELETE_LOG
+  DELETE_LOG,
+  SET_CURRENT,
+  CLEAR_CURRENT,
+  UPDATE_LOG
 } from './Constants';
 import axios from 'axios';
 
@@ -52,6 +55,40 @@ export const deleteLog = (id) => async dispatch => {
     dispatch({
       type: DELETE_LOG,
       payload: id
+    });
+  } catch (e) {
+    dispatch({
+      type: LOGS_ERROR,
+      payload: e.response.data
+    });
+  }
+};
+
+export const setCurrentLog = (log) =>  {
+  return {
+    type: SET_CURRENT,
+    payload: log
+  }
+};
+
+export const clearCurrentLog = () => {
+  return {
+    type: CLEAR_CURRENT,
+  }
+};
+
+export const updateLog = (log) => async dispatch => {
+  const config = {
+    headers: {
+      'Content-Type': 'application/json'
+    }
+  };
+  try {
+    setLoading();
+    const res = await axios.put(`/logs/${log.id}`, log, config);
+    dispatch({
+      type: UPDATE_LOG,
+      payload: res.data
     });
   } catch (e) {
     dispatch({
