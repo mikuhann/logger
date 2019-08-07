@@ -1,7 +1,8 @@
 import {
   SET_LOADING,
   GET_LOGS,
-  LOGS_ERROR
+  LOGS_ERROR,
+  ADD_LOG
 } from '../actions/Constants';
 
 const initialState = {
@@ -18,6 +19,13 @@ export default (state = initialState, action) => {
       return {
         ...state,
         logs: payload
+      };
+    }
+    case ADD_LOG: {
+      return {
+        ...state,
+        logs: [...state.logs, payload],
+        loading: false
       };
     }
     case SET_LOADING: {

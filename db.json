@@ -1,25 +1,25 @@
 {
   "logs": [
     {
-      "id": 1,
-      "message": "Change hard drive on ws 005",
-      "attention": false,
-      "date": "03-02-2019",
-      "tech": "Sam Smith"
-    },
-    {
-      "id": 2,
-      "message": "Ws 008 does not starting",
+      "message": "Add memory on workstation 003",
       "attention": true,
-      "date": "03-02-2019",
-      "tech": "Sara Smith"
+      "tech": "Someone 1",
+      "date": "2019-08-07T15:38:46.282Z",
+      "id": 1
     },
     {
-      "id": 3,
-      "message": "Change memory on ws 003",
+      "message": "Fix loading issue in workstation 006",
       "attention": false,
-      "date": "03-02-2019",
-      "tech": "Petr Wilson"
+      "tech": "Someone 2",
+      "date": "2019-08-07T15:39:14.093Z",
+      "id": 2
+    },
+    {
+      "message": "Nyan toxic ",
+      "attention": false,
+      "tech": "Someone 3",
+      "date": "2019-08-07T15:39:34.755Z",
+      "id": 3
     }
   ],
   "techs": [
