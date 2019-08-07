@@ -34,7 +34,7 @@ const EditLogModal = ({current, updateLog}) => {
       };
       updateLog(updLog);
       M.toast({
-        html: `Log # ${current.id} has been updated`
+        html: `Log # ${current.id} has been updated by tech ${tech}`
       });
     }
   };
