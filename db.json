@@ -8,11 +8,11 @@
       "date": "2019-08-07T18:14:58.752Z"
     },
     {
+      "id": 2,
       "message": "Fix loading issue in workstation 006",
-      "attention": false,
-      "tech": "Someone 2",
-      "date": "2019-08-07T15:39:14.093Z",
-      "id": 2
+      "attention": true,
+      "tech": "Someone 3",
+      "date": "2019-08-07T18:29:25.694Z"
     }
   ],
   "techs": [
