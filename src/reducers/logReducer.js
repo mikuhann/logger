@@ -5,6 +5,7 @@ import {
   ADD_LOG,
   DELETE_LOG,
   SET_CURRENT,
+  SEARCH_LOGS,
   CLEAR_CURRENT,
   UPDATE_LOG
 } from '../actions/Constants';
@@ -23,6 +24,13 @@ export default (state = initialState, action) => {
       return {
         ...state,
         logs: payload
+      };
+    }
+    case SEARCH_LOGS: {
+      return {
+        ...state,
+        logs: payload,
+        loading: false
       };
     }
     case ADD_LOG: {

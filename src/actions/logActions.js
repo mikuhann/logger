@@ -6,7 +6,8 @@ import {
   DELETE_LOG,
   SET_CURRENT,
   CLEAR_CURRENT,
-  UPDATE_LOG
+  UPDATE_LOG,
+  SEARCH_LOGS
 } from './Constants';
 import axios from 'axios';
 
@@ -88,6 +89,22 @@ export const updateLog = (log) => async dispatch => {
     const res = await axios.put(`/logs/${log.id}`, log, config);
     dispatch({
       type: UPDATE_LOG,
+      payload: res.data
+    });
+  } catch (e) {
+    dispatch({
+      type: LOGS_ERROR,
+      payload: e.response.data
+    });
+  }
+};
+
+export const searchLogs = (text) => async dispatch => {
+  try {
+    setLoading();
+    const res = await axios.get(`/logs?q=${text}`);
+    dispatch({
+      type: SEARCH_LOGS,
       payload: res.data
     });
   } catch (e) {
