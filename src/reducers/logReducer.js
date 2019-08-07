@@ -2,7 +2,8 @@ import {
   SET_LOADING,
   GET_LOGS,
   LOGS_ERROR,
-  ADD_LOG
+  ADD_LOG,
+  DELETE_LOG
 } from '../actions/Constants';
 
 const initialState = {
@@ -27,6 +28,13 @@ export default (state = initialState, action) => {
         logs: [...state.logs, payload],
         loading: false
       };
+    }
+    case DELETE_LOG: {
+      return {
+        ...state,
+        logs: state.logs.filter((log) => log.id !== payload),
+        loading: false
+      }
     }
     case SET_LOADING: {
       return {

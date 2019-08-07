@@ -2,7 +2,8 @@ import {
   GET_LOGS,
   SET_LOADING,
   LOGS_ERROR,
-  ADD_LOG
+  ADD_LOG,
+  DELETE_LOG
 } from './Constants';
 import axios from 'axios';
 
@@ -39,6 +40,22 @@ export const addLog = (log) => async dispatch => {
   } catch (e) {
     dispatch({
       type:LOGS_ERROR,
+      payload: e.response.data
+    });
+  }
+};
+
+export const deleteLog = (id) => async dispatch => {
+  try {
+    setLoading();
+    await axios.delete(`/logs/${id}`);
+    dispatch({
+      type: DELETE_LOG,
+      payload: id
+    });
+  } catch (e) {
+    dispatch({
+      type: LOGS_ERROR,
       payload: e.response.data
     });
   }
