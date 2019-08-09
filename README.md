@@ -2,7 +2,7 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 
 ## Description
 
-App for it department for log actions made with ReactJs, Redux and Json-server.
+App for it department to logging actions. Made with ReactJs, Redux and Json-server.
 
 
 ## Available Scripts
