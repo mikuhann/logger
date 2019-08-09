@@ -1,8 +1,17 @@
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
+## Description
+
+App for it department for log actions made with ReactJs, Redux and Json-server.
+
+
 ## Available Scripts
 
 In the project directory, you can run:
+
+### `npm run dev`
+
+Runs json server and react together.
 
 ### `npm start`
 
