@@ -44,6 +44,22 @@ export const addTech = (tech) => async dispatch => {
   }
 };
 
+export const deleteTech = (id) => async dispatch => {
+  try {
+    setLoading();
+    await axios.delete(`/techs/${id}`);
+    dispatch({
+      type:DELETE_TECH,
+      payload: id
+    });
+  } catch (e) {
+    dispatch({
+      type: TECHS_ERROR,
+      payload: e.response.statusText
+    });
+  }
+};
+
 export const setLoading = () => {
   return {
     type: SET_LOADING
